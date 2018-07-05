@@ -1,0 +1,3 @@
+[submodule "ebooks"]
+	path = ebooks
+	url = https://github.com/ublast/ebooks
