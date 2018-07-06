@@ -15,7 +15,7 @@ Erzeugt ein Docker Image das eine Webanwendung zur Bereinigung von MARC-Dateien 
 
 * Das Docker Image ___ebooks-fix___ bauen:
   * In das Verzeichnis des Repositories ___ebooks-fix___ wechseln:  
-    ` cd catmandu-marc`
+    ` cd ebooks-fix`
   * Aktuellen Stand des eingebundenen Submodules ___ebooks___ holen:  
     `git submodule foreach git pull origin master`
   * Ausführen:  
