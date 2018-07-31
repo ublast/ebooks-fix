@@ -17,7 +17,7 @@ Erzeugt ein Docker Image das eine Webanwendung zur Bereinigung von MARC-Dateien 
   * In das Verzeichnis des Repositories ___ebooks-fix___ wechseln:  
     ` cd ebooks-fix`
   * Aktuellen Stand des eingebundenen Submodules ___ebooks___ holen:  
-    `git submodule foreach git pull origin master`
+    `git submodule update --init --recursive --remote`
   * Ausführen:  
     `docker build -f ./Dockerfile -t ebooks-fix .`
 
@@ -32,12 +32,13 @@ Erzeugt ein Docker Image das eine Webanwendung zur Bereinigung von MARC-Dateien 
 ## Debugging des Images
 * Starten des Containers:  
   `docker run -p 8080:80 --name ebooks-fix --entrypoint "" -it --rm ebooks-fix /bin/bash`
-* In der Kommandozeile des Dockercontainers den Apache starten:  
-  `/usr/sbin/httpd`
-* Logdatei des Apaches mitlesen:  
-  `tail -f /var/log/httpd/error_log`
-* Beenden des Containers:  
-  `exit`
+* In der Kommandozeile des Dockercontainers:
+  * Apache starten:  
+    `/usr/sbin/httpd`
+  * Logdatei des Apaches mitlesen:  
+    `tail -f /var/log/httpd/error_log`
+  * Beenden des Containers:  
+    `exit`
 
 ## Weiterleitung von einem vorgeschalteten Apache
 
